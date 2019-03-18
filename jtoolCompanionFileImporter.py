@@ -5,7 +5,7 @@ import idaapi, idc, idautils
 FILE="<CompanionFileHere>"
 
 def do_rename(line):
-	presplitline = line.split(":")
+	presplitline = line.split("|") #use : for joker, | for jtool2 (joker has been deprecated per the forums
 	address = presplitline[0]
 	newName = presplitline[1].replace("\r", "").replace("\n", "")
 	address = int(address,16) #16 = base
