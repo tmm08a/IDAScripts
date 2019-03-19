@@ -11,7 +11,7 @@ def do_rename(line):
 	address = int(address,16) #16 = base
 	#print "%s %s" % (address,newName)
 	idc.MakeName(address, newName)
-	
+	idc.MakeFunction(address)
 
 if __name__ == "__main__":
 	f = open(FILE, "r")
